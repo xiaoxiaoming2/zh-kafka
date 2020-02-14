@@ -35,3 +35,12 @@ spring:
       # 在侦听器容器中运行的线程数。
       concurrency: 5
       missing-topics-fatal: false
+#测试库
+  datasource:
+    url: jdbc:mysql://test1.e-lead.cn:3306/typt?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: Eleadt1_11
+    
+#mybatis mapper
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
