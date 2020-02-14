@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 public class KafkaSimpleConsumer {
 
 // 简单消费者
-	@KafkaListener(groupId = "simpleGroup", topics = "test")
+	@KafkaListener(topics = "test")
 	public void consumer1_1(ConsumerRecord<String, Object> record, @Header(KafkaHeaders.RECEIVED_TOPIC) String topic,
 			Consumer consumer) {
 		System.out.println("消费者收到消息:" + record.value() + "; topic:" + topic);
